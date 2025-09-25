@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 function useInView(elementRef, rootMargin = "0px") {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -91,11 +92,16 @@ export default function HeroSection() {
       {/* Professional background image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-transparent z-10"></div>
-        <img
-          src="/pexels-henri-mathieu-8349428.jpg"
-          alt="Professional business background"
-          className="w-full h-full object-cover"
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src="/pexels-henri-mathieu-8349428.jpg"
+            alt="Professional business background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Modern geometric overlay */}

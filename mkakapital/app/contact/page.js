@@ -19,7 +19,7 @@ export default function ContactPage() {
                 <span className="text-primary-red font-bold text-sm uppercase tracking-widest">Get In Touch</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-typography-black mb-8 leading-tight">
-                Let's Start a
+                Let&apos;s Start a
                 <br />
                 <span className="bg-gradient-to-r from-primary-red to-secondary-cyan bg-clip-text text-transparent">
                   Conversation

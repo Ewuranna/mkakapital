@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-typography-black text-white relative overflow-hidden">
@@ -12,12 +14,16 @@ export default function Footer() {
               {/* Company Info */}
               <div className="lg:col-span-1">
                 <div className="flex items-center space-x-3 mb-6">
-                  <img
-                    src="/mkalogo.jpg"
-                    alt="MKA Kapital"
-                    className="w-30 h-10 rounded-md"
-                  />
-                 
+                  <div className="relative w-[120px] h-[40px]">
+                    <Image
+                      src="/mkalogo.jpg"
+                      alt="MKA Kapital"
+                      fill
+                      sizes="120px"
+                      className="object-contain rounded-md"
+                      priority={false}
+                    />
+                  </div>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Your trusted partner in global financial services, combining expertise with innovation.

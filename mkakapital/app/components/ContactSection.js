@@ -7,7 +7,7 @@ export default function ContactSection() {
             Ready to Accelerate Your Business?
           </h2>
           <p className="text-base text-text-secondary max-w-3xl mx-auto mb-12">
-            Join hundreds of companies already benefiting from our integrated financial ecosystem. Whether you're scaling, entering new markets, or optimizing cash flow—we can help.
+            Join hundreds of companies already benefiting from our integrated financial ecosystem. Whether you&apos;re scaling, entering new markets, or optimizing cash flow—we can help.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

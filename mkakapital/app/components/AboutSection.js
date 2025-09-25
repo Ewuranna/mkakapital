@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 relative overflow-hidden">
@@ -9,11 +11,14 @@ export default function AboutSection() {
           <div className="space-y-8">
              {/* Global Reach Image */}
              <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-light-gray hover:border-secondary-teal/30 transition-all duration-300 group">
-              <div className="h-65 overflow-hidden">
-                <img
+              <div className="h-65 overflow-hidden relative">
+                <Image
                   src="/pexels-anthonyshkraba-production-8837549.jpg"
                   alt="Global Business Network"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  priority={false}
                 />
               </div>
             </div>
