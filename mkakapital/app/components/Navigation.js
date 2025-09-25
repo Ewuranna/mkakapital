@@ -1,11 +1,15 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const useDarkLinks = isScrolled || pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,13 +20,13 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+  const navItems = [
+      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
+    { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
@@ -30,7 +34,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <button onClick={() => scrollToSection('hero')} className="flex items-center group">
+            <Link href="/" className="flex items-center group">
               <Image
                 src="/mkalogo.jpg"
                 alt="MKA Kapital logo"
@@ -39,38 +43,33 @@ export default function Navigation() {
                 priority
                 className="rounded-sm"
               />
-            </button>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {[
-                { name: 'Home', id: 'hero' },
-                { name: 'Services', id: 'services' },
-                { name: 'About', id: 'about' },
-                { name: 'Contact', id: 'contact' }
-              ].map((item) => (
-                <button
+              {navItems.map((item) => (
+                <Link
                   key={item.name}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`${isScrolled ? 'text-typography-black' : 'text-white'} hover:text-primary-red px-3 py-2 text-base font-medium transition-colors duration-300 relative group`}
+                  href={item.href}
+                  className={`${useDarkLinks ? 'text-typography-black' : 'text-white'} hover:text-primary-red px-3 py-2 text-base font-medium transition-colors duration-300 relative group`}
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-red transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
-            <button
-              onClick={() => scrollToSection('contact')}
+            <Link
+              href="/contact"
               className="bg-primary-red text-white px-6 py-2.5 rounded-sm text-sm font-medium hover:bg-red-600 transition-colors duration-300 shadow-sm hover:shadow-md"
             >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -108,27 +107,24 @@ export default function Navigation() {
         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       } overflow-hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-light-gray">
-          {[
-            { name: 'Home', id: 'hero' },
-            { name: 'Services', id: 'services' },
-            { name: 'About', id: 'about' },
-            { name: 'Contact', id: 'contact' }
-          ].map((item) => (
-            <button
+          {navItems.map((item) => (
+            <Link
               key={item.name}
-              onClick={() => scrollToSection(item.id)}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
               className="text-typography-black hover:text-primary-red block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-300"
             >
               {item.name}
-            </button>
+            </Link>
           ))}
           <div className="pt-4 pb-2">
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary-red text-white px-6 py-3 rounded-lg text-base font-medium w-full hover:bg-red-600 transition-colors duration-300"
+            <Link
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="bg-primary-red text-white px-6 py-3 rounded-lg text-base font-medium w-full hover:bg-red-600 transition-colors duration-300 inline-block text-center"
             >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>

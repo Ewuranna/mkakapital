@@ -8,18 +8,17 @@ export default function AboutSection() {
             <span className="text-secondary-cyan font-semibold text-sm uppercase tracking-wider">Why Choose MKA Kapital</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-typography-black mb-6">
-            Trusted by <span className="text-primary-red inline-block">500+ Companies</span>
+            Trusted Since <span className="text-primary-red inline-block">2019</span>
             </h2>
           <p className="text-base text-text-secondary max-w-3xl mx-auto">
-            15+ years of excellence in global trade finance with cutting-edge technology and personalized service.
-              </p>
+          Over 5 years of excellence in trade finance and business solutions, serving corporate institutions, SMEs, and individual clients across Ghana.              </p>
             </div>
 
         {/* Key Statistics Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
           {[
-            { number: "15+", label: "Years of Excellence", icon: "🏆" },
-            { number: "500+", label: "Satisfied Clients", icon: "🤝" },
+            { number: "5+", label: "Years of Excellence", icon: "🏆" },
+            { number: "50+", label: "Satisfied Clients", icon: "🤝" },
             { number: "$2.5B+", label: "Assets Under Management", icon: "📈" },
             { number: "98%", label: "Client Retention Rate", icon: "⭐" }
           ].map((stat, index) => (

@@ -131,8 +131,7 @@ export default function HeroSection() {
                   <span className="text-primary-red">Inspiring Dreams</span>
                 </h1>
                 <p className="text-base font-light max-w-2xl leading-relaxed text-gray-200">
-                  Your complete financial partner for modern business. Transform operations with integrated solutions that move at the speed of commerce—from trade financing to supply chain management.
-                </p>
+                Your trusted partner for innovative trade solutions and business support services. Serving Ghana since 2019, we specialize in general trading, asset financing, and trade financing to help clients complete transactions seamlessly and efficiently.                </p>
               </div>
 
               {/* CTA Buttons */}
@@ -155,7 +154,7 @@ export default function HeroSection() {
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <span className="flex items-center">
-                    Request Financing
+                   Get Started Today
                     <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

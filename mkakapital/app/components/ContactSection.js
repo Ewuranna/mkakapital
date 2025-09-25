@@ -7,15 +7,14 @@ export default function ContactSection() {
             Ready to Accelerate Your Business?
           </h2>
           <p className="text-base text-text-secondary max-w-3xl mx-auto mb-12">
-            Join hundreds of companies already benefiting from our integrated financial ecosystem. Whether you&apos;re scaling, entering new markets, or optimizing cash flow—we can help.
-          </p>
+          Join the growing network of businesses and individuals who trust MKA Kapital for innovative trade solutions. Whether you&apos;re scaling operations, entering new markets, or optimizing cash flow—we have the expertise and solutions to help you succeed.          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-primary-red text-white px-8 py-4 rounded-lg text-base font-semibold hover:bg-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Contact Our Experts
+            Get Started Today
             </button>
             <button className="border-2 border-primary-red text-primary-red px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary-red hover:text-white transition-all duration-300">
-              Explore Solutions
+            Contact Our Team
             </button>
           </div>
         </div>
