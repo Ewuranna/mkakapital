@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const services = [
   {
@@ -19,6 +22,12 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  const toggleCard = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
   return (
     <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -40,7 +49,10 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative h-[500px] rounded-3xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl"
+              className="group relative h-[500px] rounded-3xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl cursor-pointer"
+              onClick={() => toggleCard(index)}
+              onMouseEnter={() => setExpandedCard(index)}
+              onMouseLeave={() => setExpandedCard(null)}
             >
               {/* Background Image */}
               <Image
@@ -48,29 +60,33 @@ export default function ServicesSection() {
                 alt={service.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className={`object-cover transition-transform duration-700 ${expandedCard === index ? 'scale-110' : 'scale-100'}`}
               />
 
 
               {/* Default Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-0"></div>
+              <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500 ${expandedCard === index ? 'opacity-0' : 'opacity-80'}`}></div>
 
               {/* Hover Solid Overlay */}
-              <div className="absolute inset-0 bg-zinc-900/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className={`absolute inset-0 bg-zinc-900/95 transition-opacity duration-500 ${expandedCard === index ? 'opacity-100' : 'opacity-0'}`}></div>
 
               {/* Content Overlay */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end transform transition-transform duration-500">
-                <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className={`transform transition-transform duration-500 ${expandedCard === index ? 'translate-y-0' : 'translate-y-4'}`}>
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {service.title}
                   </h3>
 
-                  <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                  <div className={`overflow-hidden transition-all duration-500 ${expandedCard === index ? 'h-auto opacity-100' : 'h-0 opacity-0'}`}>
                     <p className="text-gray-200 mb-6 leading-relaxed text-sm">
                       {service.description}
                     </p>
 
-                    <a href="/get-started" className="inline-flex items-center text-white font-semibold border-b-2 border-primary-red pb-1 hover:text-primary-red transition-colors duration-300">
+                    <a
+                      href="/get-started"
+                      className="inline-flex items-center text-white font-semibold border-b-2 border-primary-red pb-1 hover:text-primary-red transition-colors duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       Explore Solutions
                       <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -78,8 +94,8 @@ export default function ServicesSection() {
                     </a>
                   </div>
 
-                  {/* Initial State Indicator (Visible when not hovered) */}
-                  <div className="group-hover:hidden mt-2">
+                  {/* Initial State Indicator (Visible when not expanded) */}
+                  <div className={`mt-2 transition-opacity duration-300 ${expandedCard === index ? 'opacity-0 hidden' : 'opacity-100'}`}>
                     <span className="inline-flex items-center text-white/80 text-sm font-medium">
                       Learn More
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

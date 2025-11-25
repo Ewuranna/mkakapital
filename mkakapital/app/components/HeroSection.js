@@ -124,7 +124,7 @@ export default function HeroSection() {
 
               {/* Main headline */}
               <div className="space-y-6">
-                <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                   <span className="text-white">Empowering Growth, </span>
                   <br />
                   <span className="text-primary-red">Inspiring Dreams</span>
@@ -203,11 +203,15 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+      <button
+        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 cursor-pointer hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
+        aria-label="Scroll to services"
+      >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
-      </div>
+      </button>
     </section>
   );
 }

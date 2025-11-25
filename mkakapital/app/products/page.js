@@ -1,15 +1,17 @@
+"use client";
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-
-export const metadata = {
-  title: 'Products - MKA Global Investment',
-  description: 'Explore MKA Global Investment\'s products: Stock Supply, Hire Purchase, and Adinkra Market, built to power everyday growth.',
-};
+import { useState } from 'react';
 
 export default function ProductsPage() {
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  const toggleCard = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
   const tradeCategories = [
     {
       category: "Electronics (Home Appliances)",
@@ -107,24 +109,30 @@ export default function ProductsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {tradeCategories.map((cat, idx) => (
-                <div key={idx} className="group relative h-[450px] rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                <div
+                  key={idx}
+                  className="group relative h-[450px] rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                  onClick={() => toggleCard(idx)}
+                  onMouseEnter={() => setExpandedCard(idx)}
+                  onMouseLeave={() => setExpandedCard(null)}
+                >
                   {/* Background Image with Zoom Effect */}
                   <Image
                     src={cat.image}
                     alt={cat.category}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`object-cover transition-transform duration-700 ${expandedCard === idx ? 'scale-110' : 'scale-100'}`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/90 group-hover:via-black/40 transition-all duration-500"></div>
+                  <div className={`absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/90 transition-all duration-500 ${expandedCard === idx ? 'via-black/40' : ''}`}></div>
 
                   {/* Content Container */}
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className={`transform transition-transform duration-500 ${expandedCard === idx ? 'translate-y-0' : 'translate-y-4'}`}>
                       {/* Icon Badge */}
-                      <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center mb-6 shadow-lg group-hover:bg-white group-hover:text-typography-black transition-all duration-500">
+                      <div className={`w-16 h-16 rounded-2xl backdrop-blur-md border text-white flex items-center justify-center mb-6 shadow-lg transition-all duration-500 ${expandedCard === idx ? 'bg-white text-typography-black border-white' : 'bg-white/20 border-white/30'}`}>
                         {cat.icon}
                       </div>
 
@@ -132,7 +140,7 @@ export default function ProductsPage() {
                       <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">{cat.category}</h3>
 
                       {/* Items List - Animated Reveal */}
-                      <div className="space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden">
+                      <div className={`space-y-4 transition-opacity duration-500 delay-100 overflow-hidden ${expandedCard === idx ? 'opacity-100 h-auto' : 'opacity-0 h-0'}`}>
                         <div className="w-12 h-1 bg-primary-red rounded-full mb-4"></div>
                         <div className="flex flex-wrap gap-2 pb-2">
                           {cat.items.map((item, i) => (
@@ -144,7 +152,7 @@ export default function ProductsPage() {
                       </div>
 
                       {/* "View Details" hint for mobile/touch */}
-                      <div className="mt-4 flex items-center gap-2 text-white/80 text-sm font-medium group-hover:opacity-0 transition-opacity duration-300 lg:hidden">
+                      <div className={`mt-4 flex items-center gap-2 text-white/80 text-sm font-medium transition-opacity duration-300 lg:hidden ${expandedCard === idx ? 'opacity-0' : 'opacity-100'}`}>
                         <span>Tap to view details</span>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                       </div>

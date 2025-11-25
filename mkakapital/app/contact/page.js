@@ -12,7 +12,7 @@ export default function ContactPage() {
       <Navigation />
       <main>
         {/* Modern Hero Section */}
-        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-20 overflow-hidden">
           {/* Background Accents */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div className="absolute top-20 right-0 w-96 h-96 bg-primary-red/5 rounded-full blur-3xl mix-blend-multiply animate-blob"></div>
@@ -106,11 +106,9 @@ export default function ContactPage() {
                         <label htmlFor="service" className="block text-sm font-medium text-typography-black mb-2">Service Interest</label>
                         <select id="service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-red/20 focus:border-primary-red transition-colors outline-none">
                           <option value="">Select a service</option>
-                          <option value="trade-finance">Trade & Project Financing</option>
-                          <option value="asset-financing">Smart Asset Financing</option>
-                          <option value="logistics">Integrated Logistics</option>
-                          <option value="marketplace">B2B Marketplace</option>
-                          <option value="risk-management">Risk Management</option>
+                          <option value="mobile-money">Mobile Money (MoMo) Services</option>
+                          <option value="trade-finance">Trade, Stock & Asset Finance</option>
+                          <option value="marketing">Sales & Marketing Agency</option>
                           <option value="other">Other</option>
                         </select>
                       </div>

@@ -76,7 +76,7 @@ export default function Navigation() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-typography-black hover:text-primary-red hover:bg-light-gray transition-colors duration-300"
+              className={`inline-flex items-center justify-center p-2 rounded-md ${useDarkLinks ? 'text-typography-black hover:bg-light-gray' : 'text-white hover:bg-white/10'} hover:text-primary-red transition-colors duration-300`}
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
