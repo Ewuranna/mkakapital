@@ -5,14 +5,14 @@ export default function AboutSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block p-2 bg-secondary-cyan/10 rounded-lg mb-4">
-            <span className="text-secondary-cyan font-semibold text-sm uppercase tracking-wider">Why Choose MKA Kapital</span>
+            <span className="text-secondary-cyan font-semibold text-sm uppercase tracking-wider">Why Choose MKA Global Investment</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-typography-black mb-6">
             Trusted Since <span className="text-primary-red inline-block">2019</span>
-            </h2>
+          </h2>
           <p className="text-base text-text-secondary max-w-3xl mx-auto">
-          Over 5 years of excellence in trade finance and business solutions, serving corporate institutions, SMEs, and individual clients across Ghana.              </p>
-            </div>
+            Over 5 years of excellence in trade finance and business solutions, serving corporate institutions, SMEs, and individual clients across Ghana.              </p>
+        </div>
 
         {/* Key Statistics Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
@@ -30,8 +30,8 @@ export default function AboutSection() {
               <div className="text-sm text-text-secondary font-medium">{stat.label}</div>
             </div>
           ))}
-              </div>
-        
+        </div>
+
       </div>
     </section>
   );

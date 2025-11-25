@@ -34,7 +34,7 @@ export default function AboutSection() {
               <p className="text-text-secondary leading-relaxed mb-6">
               We exist to promote business and improve livelihoods through innovative trade solutions and business support services. We seek to empower people and businesses for sustainable growth and wealth creation.              </p>
               <div className="flex flex-wrap gap-3">
-                {["Innovation", "Excellence", "Speed", "Efficiency"].map((value, index) => (
+                {["Integrity","Speed", "Transparency","Professionalism"].map((value, index) => (
                   <span key={index} className="bg-secondary-teal/10 text-black px-4 py-2 rounded-lg text-sm font-medium">
                     {value}
                   </span>

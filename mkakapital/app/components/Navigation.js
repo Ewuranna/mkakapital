@@ -21,8 +21,8 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-      { name: 'About', href: '/about' },
-      { name: 'Team', href: '/team' },
+    { name: 'About', href: '/about' },
+    { name: 'Team', href: '/team' },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
@@ -37,7 +37,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center group">
               <Image
                 src="/mkalogo.jpg"
-                alt="MKA Kapital logo"
+                alt="MKA Global Investment logo"
                 width={120}
                 height={30}
                 priority
@@ -65,7 +65,7 @@ export default function Navigation() {
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
+              href="/get-started"
               className="bg-primary-red text-white px-6 py-2.5 rounded-sm text-sm font-medium hover:bg-red-600 transition-colors duration-300 shadow-sm hover:shadow-md"
             >
               Get Started
@@ -82,9 +82,8 @@ export default function Navigation() {
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
               <svg
-                className={`block h-6 w-6 transition-transform duration-300 ${
-                  isMenuOpen ? 'rotate-45' : ''
-                }`}
+                className={`block h-6 w-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-45' : ''
+                  }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -103,9 +102,8 @@ export default function Navigation() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`lg:hidden transition-all duration-300 ${
-        isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-      } overflow-hidden`}>
+      <div className={`lg:hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        } overflow-hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-light-gray">
           {navItems.map((item) => (
             <Link
@@ -119,7 +117,7 @@ export default function Navigation() {
           ))}
           <div className="pt-4 pb-2">
             <Link
-              href="/contact"
+              href="/get-started"
               onClick={() => setIsMenuOpen(false)}
               className="bg-primary-red text-white px-6 py-3 rounded-lg text-base font-medium w-full hover:bg-red-600 transition-colors duration-300 inline-block text-center"
             >

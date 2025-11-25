@@ -148,10 +148,10 @@ export default function HeroSection() {
                     </svg>
                   </span>
                 </button>
-                <button
+                <a
                   aria-label="Request Financing"
                   className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-5 py-3 rounded-lg text-base font-semibold hover:bg-white hover:text-typography-black transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-white/10"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  href="/get-started"
                 >
                   <span className="flex items-center">
                    Get Started Today
@@ -159,7 +159,7 @@ export default function HeroSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </span>
-                </button>
+                </a>
               </div>
             </div>
 

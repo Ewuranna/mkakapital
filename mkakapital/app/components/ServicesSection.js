@@ -69,7 +69,7 @@ export default function ServicesSection() {
               Built for Modern Business
             </h2>
             <p className="text-base text-text-secondary max-w-3xl mx-auto">
-            MKA Kapital offers a range of services designed to cut waste, reduce operational costs, and deliver value for money through strategic outsourcing. Our robust and versatile operations have attracted partners from various industries who rely on us for innovative trade solutions and comprehensive business support.       </p>
+              MKA Global Investment offers a range of services designed to cut waste, reduce operational costs, and deliver value for money through strategic outsourcing. Our robust and versatile operations have attracted partners from various industries who rely on us for innovative trade solutions and comprehensive business support.       </p>
           </div>
 
           {/* Uniform Services Grid */}
@@ -93,9 +93,9 @@ export default function ServicesSection() {
                 </p>
 
                 {/* CTA */}
-                <button className="w-full bg-primary-white text-gray border-1 border-secondary-teal py-2 px-3 rounded-md text-sm font-semibold hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                <a href="/get-started" className="w-full text-center bg-primary-white text-gray border-1 border-secondary-teal py-2 px-3 rounded-md text-sm font-semibold hover:bg-black hover:text-white hover:border-black transition-all duration-300">
                   Explore Solutions
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -107,15 +107,15 @@ export default function ServicesSection() {
             Ready to accelerate your business? Discover how our integrated ecosystem unlocks growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-black text-white px-10 py-3 rounded-lg text-lg font-bold hover:bg-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
+            <a href="/contact" className="bg-black text-white px-10 py-3 rounded-lg text-lg font-bold hover:bg-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
               Contact Our Experts
-            </button>
-            <button className="border-1 border-black text-black px-10 py-3 rounded-lg text-lg font-bold hover:bg-primary-red hover:border-primary-red hover:text-white transition-all duration-300">
+            </a>
+            <a href="/get-started" className="border-1 border-black text-black px-10 py-3 rounded-lg text-lg font-bold hover:bg-primary-red hover:border-primary-red hover:text-white transition-all duration-300">
               Get Started Today
-            </button>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }
