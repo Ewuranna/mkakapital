@@ -117,11 +117,10 @@ export default function HeroSection() {
             {/* Left Column - Content */}
             <div
               ref={leftRef}
-              className={`text-white space-y-8 transform transition-all duration-700 ease-out ${
-                leftInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
+              className={`text-white space-y-8 transform transition-all duration-700 ease-out ${leftInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
             >
-              
+
 
               {/* Main headline */}
               <div className="space-y-6">
@@ -131,7 +130,8 @@ export default function HeroSection() {
                   <span className="text-primary-red">Inspiring Dreams</span>
                 </h1>
                 <p className="text-base font-light max-w-2xl leading-relaxed text-gray-200">
-                Your trusted partner for innovative trade solutions and business support services. Serving Ghana since 2019, we specialize in general trading, asset financing, and trade financing to help clients complete transactions seamlessly and efficiently.                </p>
+                  Your complete partner for innovative mobile payment systems and commercial agency solutions. Delivering convenience, financial inclusion, and business growth for individuals, SMEs, and corporate clients.
+                </p>
               </div>
 
               {/* CTA Buttons */}
@@ -154,7 +154,7 @@ export default function HeroSection() {
                   href="/get-started"
                 >
                   <span className="flex items-center">
-                   Get Started Today
+                    Get Started Today
                     <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -167,9 +167,8 @@ export default function HeroSection() {
             <div className="relative hidden lg:block">
               <div
                 ref={rightRef}
-                className={`relative bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 transform transition-all duration-700 ease-out delay-150 ${
-                  rightInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
+                className={`relative bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 transform transition-all duration-700 ease-out delay-150 ${rightInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                  }`}
               >
                 <div className="space-y-6">
                   <div className="text-center">

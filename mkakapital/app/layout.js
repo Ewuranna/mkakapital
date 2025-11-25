@@ -5,6 +5,9 @@ export const metadata = {
   description: "MKA Global Investment provides expert financial services and investment solutions with a modern, professional approach. Discover our comprehensive range of financial services designed for your success.",
   keywords: "financial services, investment, capital, finance, MKA Global Investment, professional finance",
   authors: [{ name: "MKA Global Investment" }],
+  icons: {
+    icon: '/mka icon.jpg',
+  },
   openGraph: {
     title: "MKA Global Investment - Professional Financial Services",
     description: "Expert financial services and investment solutions with a modern, professional approach.",
@@ -16,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased" suppressHydrationWarning>
+      <body className="antialiased overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -16,7 +16,7 @@ export default function TeamPage() {
       <Navigation />
       <main>
         {/* Modern Hero Section */}
-        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-15 overflow-hidden">
           {/* Background Accents */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-primary-red/5 rounded-full blur-3xl mix-blend-multiply animate-blob"></div>
@@ -37,7 +37,7 @@ export default function TeamPage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-2xl mx-auto">
-                A diverse team committed to execution, integrity and client success.
+                A diverse team committed to execution, integrity, and client success.
               </p>
             </div>
           </div>

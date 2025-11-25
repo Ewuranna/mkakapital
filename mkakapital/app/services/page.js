@@ -9,66 +9,24 @@ export const metadata = {
 
 const services = [
   {
-    title: 'General Trade & E-commerce',
-    description: 'Facilitating general trade operations and e-commerce enablement.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h18v4H3zM3 7l3.6 9.6A2 2 0 008.47 18H17a2 2 0 001.9-1.37L21 11M16 13a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-    )
-  },
-  {
-    title: 'Business & Project Financing',
-    description: 'Facilitating general trade, business and project financing.',
+    title: 'Mobile Money (MoMo) Services',
+    description: 'Secure and efficient mobile money operations across major networks in Ghana — including deposits, withdrawals, airtime & data purchases, bill payments, merchant solutions, and agent network management.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     )
   },
   {
-    title: 'Mining, Oil & Gas Support',
-    description: 'Support services for the mining, oil and gas sectors.',
+    title: 'Trade, Stock & Asset Finance',
+    description: 'Flexible hire purchase financing solutions designed to help individuals and businesses acquire essential assets like home appliances — with repayment terms tailored to customer needs.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
     )
   },
   {
-    title: 'Commodities & Agro Trading',
-    description: 'Trading and sourcing of commodities and other agro products.',
+    title: 'Sales & Marketing Agency',
+    description: 'Professional sales and marketing services for local and international partners — including digital marketing, field sales representation, product activations, market research, and brand distribution support.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 20l4-16m2 16l4-16M5 12h14" /></svg>
-    )
-  },
-  {
-    title: 'Agro Processing',
-    description: 'Processing capabilities for agro-based inputs and outputs.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v12m6-6H6" /></svg>
-    )
-  },
-  {
-    title: 'Sales & Marketing',
-    description: 'Go-to-market support to drive reach and conversion.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5h10M11 9h7M11 13h4M4 7h.01M4 11h.01M4 15h.01" /></svg>
-    )
-  },
-  {
-    title: 'Collateral & Warehouse',
-    description: 'Collateral management and professional warehousing.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10l9-6 9 6v8a2 2 0 01-2 2h-4a2 2 0 01-2-2V12H9v6a2 2 0 01-2 2H3z" /></svg>
-    )
-  },
-  {
-    title: 'Revenue Mobilization & Assurance',
-    description: 'Revenue mobilization, assurance and management.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3v18m-7-7h18" /></svg>
-    )
-  },
-  {
-    title: 'MoMo Agents',
-    description: 'Mobile money agent network enablement and operations.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7h18M6 10h12M9 13h6M4 17h16" /></svg>
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
     )
   }
 ];
@@ -79,7 +37,7 @@ export default function ServicesPage() {
       <Navigation />
       <main>
         {/* Modern Hero Section */}
-        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-15 overflow-hidden">
           {/* Background Accents */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-primary-red/5 rounded-full blur-3xl mix-blend-multiply animate-blob"></div>
@@ -144,7 +102,7 @@ export default function ServicesPage() {
               <div className="relative z-10 px-8 py-16 sm:px-16 sm:py-20 text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to accelerate your growth?</h2>
                 <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-                  Join the industry leaders who trust MKA Global Investment for their strategic needs.
+                  Join the industry leaders who trust MKA Kapital & Marketing Limited for their strategic needs.
                 </p>
                 <Link href="/contact" className="inline-block px-8 py-4 bg-white text-typography-black rounded-xl font-bold hover:bg-gray-100 transition-colors">
                   Contact Our Experts

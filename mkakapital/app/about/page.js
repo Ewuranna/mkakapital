@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '../components/Reveal';
+import GrowthGraph from '../components/GrowthGraph';
 
 export const metadata = {
   title: 'About Us - MKA Global Investment',
@@ -11,341 +12,262 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        {/* Minimal Hero */}
-        <section className="relative overflow-hidden py-14 sm:py-18">
-          {/* Dark radial overlays */}
-          <div className="pointer-events-none absolute inset-0 -z-10">
-            {/* Mesh-style red radials */}
-            <div
-              className="absolute inset-0 opacity-80"
-              style={{
-                background:
-                  'radial-gradient(40% 40% at 0% 0%, rgba(239,68,68,0.28) 0%, rgba(239,68,68,0.08) 38%, transparent 62%),\
-                   radial-gradient(35% 35% at 100% 100%, rgba(239,68,68,0.22) 0%, rgba(239,68,68,0.06) 42%, transparent 66%),\
-                   radial-gradient(22% 22% at 70% 30%, rgba(239,68,68,0.16) 0%, transparent 60%)',
-              }}
-            />
-            {/* Conic accent band */}
-            <div
-              className="absolute inset-0 opacity-35 mix-blend-multiply"
-              style={{
-                backgroundImage:
-                  'conic-gradient(from 210deg, rgba(239,68,68,0.18), rgba(239,68,68,0), rgba(239,68,68,0.18))',
-                WebkitMaskImage:
-                  'radial-gradient(circle at 50% 50%, transparent 45%, black 52%, black 62%, transparent 70%)',
-                maskImage:
-                  'radial-gradient(circle at 50% 50%, transparent 45%, black 52%, black 62%, transparent 70%)',
-              }}
-            />
-            {/* Fine red dot texture */}
-            <div
-              className="absolute inset-0 opacity-25"
-              style={{
-                backgroundImage: 'radial-gradient(rgba(239,68,68,0.10) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-              }}
-            />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pt-10">
-              <div>
-                <div className="text-xs uppercase tracking-wider text-text-secondary mb-3">About MKA Global Investment </div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-typography-black mb-6 leading-tight">Your Trusted Partner in Financial Solutions</h1>
-                <p className="text-base text-text-secondary mb-6"> MKA Global Investment delivers tailored asset financing, trade financing,
-                  and general trading solutions that help Ghanaian businesses and households complete transactions seamlessly and efficiently.</p>
-                <Link href="/services" className="inline-block bg-primary-red text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-red-600 transition-colors">Learn More</Link>
-              </div>
-              <div className="relative w-full h-56 sm:h-64 lg:h-72 xl:h-110 mt-5">
-                <Image src="/pexels-mikhail-nilov-9301824.jpg" alt="MKA Global Investment mark" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover rounded-2xl border border-primary-red shadow-lg" />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Modern Hero Section */}
+        <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-32 overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gray-50/50 skew-x-12 translate-x-1/4" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary-red/5 rounded-full blur-3xl mix-blend-multiply animate-blob" />
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-secondary-teal/5 rounded-full blur-3xl mix-blend-multiply animate-blob animation-delay-2000" />
 
-        {/* Why work with us? Panel */}
-        <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-[28px] bg-gray-50 border border-light-gray p-6 sm:p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                {/* Left column  */}
-                <div className="lg:col-span-7">
-                  {/* Top small cards row */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-white rounded-xl p-5 border border-light-gray">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 rounded-lg bg-primary-red/10 text-primary-red flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6l4 2" /></svg>
-                        </div>
-                        <h3 className="text-xl font-bold text-typography-black">Our Mission</h3>
-                      </div>
-                      <p className="text-sm text-text-secondary">We exist to promote business and improve livelihoods through innovative trade solutions
-                        and business support services.</p>
-                    </div>
-                    <div className="bg-white rounded-xl p-5 border border-light-gray">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 rounded-lg bg-primary-red/10 text-primary-red flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm6 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <h3 className="text-xl font-bold text-typography-black">Our Vision</h3>
-                      </div>
-                      <p className="text-sm text-text-secondary">To be the global leader in the provision of innovative trade solutions..</p>
-                    </div>
-                  </div>
-                  {/* Feature image large */}
-                  <div className="relative w-full h-64 sm:h-80 md:h-76 rounded-2xl overflow-hidden border border-light-gray">
-                    <Image src="/pexels-mikhail-nilov-9301824.jpg" alt="Work sample" fill sizes="100vw" className="object-cover" />
-                  </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <Reveal>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gray-200 mb-6 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-primary-red"></span>
+                  <span className="text-xs font-bold tracking-wider text-text-secondary uppercase">About MKA Global</span>
                 </div>
-
-                {/* Right column */}
-                <div className="lg:col-span-5 flex flex-col justify-between mt-5 pl-5">
-                  <div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-6">Why work with us?</h2>
-                    {/* Icon boxes */}
-                    <div className="space-y-3 mb-10">
-                      <div className="flex items-center gap-4 bg-white rounded-xl border border-light-gray p-4">
-                        <div className="w-10 h-10 rounded-lg bg-secondary-teal/10 text-secondary-teal flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4" /></svg>
-                        </div>
-                        <p className="text-sm text-typography-black">Proven track record since 2019</p>
-                      </div>
-                      <div className="flex items-center gap-4 bg-white rounded-xl border border-light-gray p-4">
-                        <div className="w-10 h-10 rounded-lg bg-secondary-teal/10 text-secondary-teal flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101M9 15l6-6" /></svg>
-                        </div>
-                        <p className="text-sm text-typography-black">Expertise across multiple sectors</p>
-                      </div>
-                      <div className="flex items-center gap-4 bg-white rounded-xl border border-light-gray p-4">
-                        <div className="w-10 h-10 rounded-lg bg-secondary-teal/10 text-secondary-teal flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-                        </div>
-                        <p className="text-sm text-typography-black">Flexible, client-focused solutions</p>
-                      </div>
-                      <div className="flex items-center gap-4 bg-white rounded-xl border border-light-gray p-4">
-                        <div className="w-10 h-10 rounded-lg bg-secondary-teal/10 text-secondary-teal flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <p className="text-sm text-typography-black">Strong B2B partnerships</p>
-                      </div>
-                      <div className="flex items-center gap-4 bg-white rounded-xl border border-light-gray p-4">
-                        <div className="w-10 h-10 rounded-lg bg-secondary-teal/10 text-secondary-teal flex items-center justify-center flex-shrink-0">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                        </div>
-                        <p className="text-sm text-typography-black">Commitment to innovation and results</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Growth - asymmetric layout with line-art chart */}
-        <section aria-labelledby="our-growth-heading" className="py-14 relative overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <article className="max-w-6xl mx-auto">
-              <Reveal as="header">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary-red/10 text-primary-red flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 17l5-5 4 4 7-7" /></svg>
-                  </div>
-                  <h2 id="our-growth-heading" className="text-3xl sm:text-4xl font-bold text-typography-black">Our Growth</h2>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-typography-black mb-6 leading-tight">
+                  Your Trusted Partner in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-red to-secondary-teal">Innovative Solutions</span>
+                </h1>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed max-w-lg">
+                  MKA Kapital & Marketing Limited delivers tailored mobile payment systems, asset financing, and commercial agency solutions that help Ghanaian businesses and households drive convenience and growth.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/services" className="px-8 py-4 bg-primary-red text-white rounded-xl font-semibold hover:bg-red-600 transition-all shadow-lg shadow-primary-red/20 hover:shadow-primary-red/30 hover:-translate-y-0.5">
+                    Our Services
+                  </Link>
+                  <Link href="/contact" className="px-8 py-4 bg-white text-typography-black border border-gray-200 rounded-xl font-semibold hover:border-gray-300 hover:bg-gray-50 transition-all">
+                    Contact Us
+                  </Link>
                 </div>
               </Reveal>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative">
-                {/* subtle background accent */}
-                <div className="pointer-events-none absolute -z-10 inset-0 opacity-20" style={{
-                  background:
-                    'radial-gradient(30% 50% at 0% 0%, rgba(239,68,68,0.18) 0%, transparent 70%),radial-gradient(24% 40% at 100% 80%, rgba(20,184,166,0.16) 0%, transparent 70%)'
-                }} />
-                <Reveal className="lg:col-span-5">
-                  <p className="text-sm sm:text-base text-text-secondary leading-7">
-                    From our humble beginnings with a lean team, MKA Global Investment has grown into a trusted partner with a broad network of professionals and B2B relationships. Our growth is driven by a deep commitment to research and development, which remains the backbone of our strategic positioning in the market.
-                  </p>
-                  <div className="mt-6">
-                    <Link href="/get-started" className="inline-block bg-primary-red text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-red-600 transition-colors">Get Started</Link>
-                  </div>
-                </Reveal>
-                <Reveal className="lg:col-span-7">
-                  <div role="img" aria-label="Company growth from 2019 with milestones" className="relative w-full h-64 sm:h-72 lg:h-80 rounded-xl border border-light-gray bg-white p-4 sm:p-6 shadow-sm">
-                    <svg viewBox="0 0 600 240" className="w-full h-full">
-                      {/* axes */}
-                      <line x1="40" y1="210" x2="560" y2="210" stroke="rgba(0,0,0,0.18)" strokeWidth="1.5" />
-                      <line x1="40" y1="30" x2="40" y2="210" stroke="rgba(0,0,0,0.12)" strokeWidth="1.5" />
-                      {/* horizontal grid lines */}
-                      {[180, 150, 120, 90].map((y, i) => (
-                        <line key={i} x1="40" y1={y} x2="560" y2={y} stroke="rgba(0,0,0,0.06)" strokeWidth="1" strokeDasharray="4 4" />
-                      ))}
-                      {/* area fill (brand red, soft) */}
-                      <path d="M70 180 L170 160 L270 135 L370 110 L510 90 L510 210 L70 210 Z" fill="rgba(239,68,68,0.14)" />
-                      {/* line (brand red, rounded) */}
-                      <polyline points="70,180 170,160 270,135 370,110 510,90" fill="none" stroke="rgba(239,68,68,1)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                      {/* markers (colored pointers with white stroke for clarity) */}
-                      {[{ x: 70, y: 180, label: 'Established' }, { x: 170, y: 160, label: 'First Client' }, { x: 270, y: 135, label: '10+ Partnerships' }, { x: 370, y: 110, label: 'R&D Acceleration' }, { x: 510, y: 90, label: 'Nationwide Presence' }].map((p, i) => (
-                        <g key={i}>
-                          <circle cx={p.x} cy={p.y} r="5" fill="rgba(239,68,68,1)" stroke="#fff" strokeWidth="2" />
-                          <text x={p.x} y={p.y - 12} textAnchor="middle" fontSize="11" fill="rgba(0,0,0,0.68)">{p.label}</text>
-                        </g>
-                      ))}
-                      {/* x ticks and year labels */}
-                      {[70, 170, 270, 370, 510].map((x, i) => (
-                        <g key={i}>
-                          <line x1={x} y1="210" x2={x} y2="214" stroke="rgba(0,0,0,0.25)" strokeWidth="1.5" />
-                          <text x={x} y="230" textAnchor="middle" fontSize="12" fontWeight="500" fill="rgba(0,0,0,0.7)">{2019 + i}</text>
-                        </g>
-                      ))}
-                    </svg>
-                  </div>
-                </Reveal>
-              </div>
-            </article>
-          </div>
-        </section>
 
-        {/* Our People - offset with pull quote and mosaic */}
-        <section aria-labelledby="our-people-heading" className="py-14 relative overflow-hidden bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
-              <div className="lg:col-span-6 lg:m-8 pr-15">
-
-                <Reveal>
-                  <blockquote className="text-5xl sm:text-2xl text-typography-black font-semibold leading-relaxed relative pl-4">
-                    <span className="absolute left-0 top-0 text-primary-red text-2xl leading-none">“</span>
-                    Our people are our greatest asset.
-                  </blockquote>
-                </Reveal>
-                <Reveal>
-                  <p className="mt-4 text-sm sm:text-base text-text-secondary leading-7">
-                    We believe our people are our greatest asset. Our team is carefully selected and strategically developed to meet both the current and future needs of the company and our clients.
-                  </p>
-                </Reveal>
-                <Reveal>
-                  <div className="mt-6">
-                    <Link href="/team" className="inline-block bg-primary-red text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-red-600 transition-colors">Meet Our Team</Link>
-                  </div>
-                </Reveal>
-              </div>
-              <div className="lg:col-span-6">
-                <Reveal>
-                  <div className="relative">
-                    {/* background accent */}
-                    <div className="absolute inset-0 -z-10 opacity-25" style={{
-                      background:
-                        'radial-gradient(28% 40% at 85% 15%, rgba(34,211,238,0.18) 0%, transparent 70%),\\\n                         radial-gradient(24% 36% at 10% 90%, rgba(20,184,166,0.16) 0%, transparent 70%)'
-                    }} />
-                    <div className="flex gap-3 h-80 sm:h-72">
-                      <div className="relative flex-1 rounded-2xl overflow-hidden">
-                        <Image src="/pexels-henri-mathieu-8349428.jpg" alt="Team collaboration" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top" />
-                      </div>
-                      <div className="flex flex-col gap-3 w-32 sm:w-40">
-                        <div className="relative flex-1 rounded-2xl overflow-hidden">
-                          <Image src="/pexels-anthonyshkraba-production-8837549.jpg" alt="Team focus" fill sizes="160px" className="object-cover object-top" />
-                        </div>
-                        <div className="relative flex-1 rounded-2xl overflow-hidden">
-                          <Image src="/pexels-thirdman-5319357.jpg" alt="Professional team" fill sizes="160px" className="object-cover object-top" />
-                        </div>
-                      </div>
+              <Reveal delay={0.2} className="relative">
+                <div className="relative h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+                  <Image
+                    src="/pexels-civan-9836373.jpg"
+                    alt="MKA Team"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+                {/* Floating Stats Card */}
+                <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-xs animate-float hidden md:block">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                     </div>
-
+                    <div>
+                      <p className="text-3xl font-bold text-typography-black">5+</p>
+                      <p className="text-sm text-text-secondary">Years of Excellence</p>
+                    </div>
                   </div>
-                </Reveal>
-              </div>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        {/* Core Values - Modern Grid Design */}
-        <section aria-labelledby="core-values-heading" className="py-20 relative overflow-hidden bg-gray-50/50">
+        {/* Why Work With Us - Modern Grid */}
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <article className="max-w-7xl mx-auto">
-              <Reveal as="header" className="mb-16 text-center">
-                <h2 id="core-values-heading" className="text-4xl sm:text-5xl font-bold text-typography-black mb-6">Core Values</h2>
-                <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Reveal>
+                <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">Why Choose MKA?</h2>
+                <p className="text-text-secondary text-lg">
+                  We combine local expertise with global standards to deliver solutions that truly matter.
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Proven Track Record",
+                  desc: "Since 2017, we have consistently delivered value to our clients across multiple sectors.",
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                },
+                {
+                  title: "Sector Expertise",
+                  desc: "Deep understanding of mobile money, asset finance, and commercial trading landscapes.",
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                },
+                {
+                  title: "Client-Centric",
+                  desc: "Flexible solutions tailored to the unique needs of every business and individual we serve.",
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
+                }
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.1}>
+                  <div className="group p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div className="w-14 h-14 rounded-xl bg-white text-primary-red shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary-red group-hover:text-white transition-all duration-300">
+                      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {item.icon}
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-typography-black mb-3">{item.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Modern Animated Graph Section */}
+        <section className="py-24 bg-typography-black text-white overflow-hidden relative">
+          {/* Background Gradients */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-red rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary-teal rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3"></div>
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <Reveal>
+                <div className="inline-block px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm mb-6 border border-white/10">
+                  <span className="text-primary-red font-bold tracking-wider uppercase text-sm">Our Trajectory</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                  Consistent Growth <br />
+                  <span className="text-gray-400">Year After Year</span>
+                </h2>
+                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                  From our humble beginnings with a lean team, MKA Kapital has grown into a trusted partner with a nationwide presence. Our commitment to R&D remains the backbone of our strategic positioning.
+                </p>
+
+                <div className="grid grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-4xl font-bold text-white mb-1">2017</p>
+                    <p className="text-sm text-gray-400 uppercase tracking-wider">Established</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-white mb-1">100%</p>
+                    <p className="text-sm text-gray-400 uppercase tracking-wider">Commitment</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-2xl relative">
+                  <div className="absolute top-4 right-6 flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-primary-red animate-pulse"></span>
+                    <span className="text-xs text-gray-400 font-medium">Live Growth Metrics</span>
+                  </div>
+
+                  {/* Custom CSS Chart */}
+                  <GrowthGraph />
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Our People Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <Reveal className="order-2 lg:order-1">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4 mt-8">
+                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="/pexels-henri-mathieu-8349428.jpg" alt="Team 1" fill className="object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="/pexels-anthonyshkraba-production-8837549.jpg" alt="Team 2" fill className="object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="/pexels-thirdman-5319357.jpg" alt="Team 3" fill className="object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="/pexels-mikhail-nilov-9301824.jpg" alt="Team 4" fill className="object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal className="order-1 lg:order-2">
+                <blockquote className="text-3xl sm:text-4xl font-bold text-typography-black leading-tight mb-6">
+                  <span className="text-primary-red">“</span>
+                  Our people are our greatest asset. We invest in talent to drive the future.
+                  <span className="text-primary-red">”</span>
+                </blockquote>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                  We believe that a company is only as good as the people behind it. Our team is carefully selected and strategically developed to meet both the current and future needs of the company and our clients.
+                </p>
+                <Link href="/team" className="inline-flex items-center gap-2 text-primary-red font-bold hover:gap-3 transition-all">
+                  Meet Our Team
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </Link>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Reveal>
+                <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">Core Values</h2>
+                <p className="text-text-secondary text-lg">
                   The principles that guide every decision we make and every relationship we build.
                 </p>
               </Reveal>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    title: "Integrity",
-                    desc: "We do what is right, always. Our commitment to ethical practices forms the foundation of every business relationship.",
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4" />
-                      </svg>
-                    ),
-                    color: "text-primary-red",
-                    bg: "bg-primary-red/5"
-                  },
-                  {
-                    title: "Service",
-                    desc: "We go the extra mile to meet client needs, ensuring exceptional experiences at every touchpoint of our journey together.",
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h2l3 7 4-14 3 7h6" />
-                      </svg>
-                    ),
-                    color: "text-secondary-teal",
-                    bg: "bg-secondary-teal/5"
-                  },
-                  {
-                    title: "Transparency",
-                    desc: "We believe in open, honest, and accountable dealings that build lasting trust with our partners and clients.",
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm7 0a10 10 0 11-20 0 10 10 0 0120 0z" />
-                      </svg>
-                    ),
-                    color: "text-primary-red",
-                    bg: "bg-primary-red/5"
-                  },
-                  {
-                    title: "Speed",
-                    desc: "We deliver timely and efficiently without compromise, meeting deadlines with precision and reliability.",
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    ),
-                    color: "text-secondary-teal",
-                    bg: "bg-secondary-teal/5"
-                  },
-                  {
-                    title: "Professionalism",
-                    desc: "We maintain a high level of conduct, appearance and performance in all our endeavors and interactions.",
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    ),
-                    color: "text-primary-red",
-                    bg: "bg-primary-red/5"
-                  }
-                ].map((value, index) => (
-                  <Reveal key={index} delay={index * 0.1}>
-                    <div className="group h-full p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                      <div className={`w-14 h-14 rounded-xl ${value.bg} ${value.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        {value.icon}
-                      </div>
-                      <h3 className="text-xl font-bold text-typography-black mb-4">{value.title}</h3>
-                      <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                        {value.desc}
-                      </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Transparency",
+                  desc: "We believe in open, honest, and accountable dealings that build lasting trust.",
+                  color: "bg-blue-50 text-blue-600"
+                },
+                {
+                  title: "Integrity",
+                  desc: "We do what is right, always. Ethical practices form our foundation.",
+                  color: "bg-green-50 text-green-600"
+                },
+                {
+                  title: "Professionalism",
+                  desc: "We maintain a high level of conduct, appearance, and performance.",
+                  color: "bg-purple-50 text-purple-600"
+                },
+                {
+                  title: "Service",
+                  desc: "We go the extra mile to create exceptional experiences at every touchpoint.",
+                  color: "bg-orange-50 text-orange-600"
+                },
+                {
+                  title: "Speed",
+                  desc: "We deliver timely and efficiently without compromise.",
+                  color: "bg-red-50 text-red-600"
+                }
+              ].map((value, index) => (
+                <Reveal key={index} delay={index * 0.1}>
+                  <div className="group h-full p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div className={`w-12 h-12 rounded-xl ${value.color} flex items-center justify-center mb-6 text-xl font-bold`}>
+                      {value.title.charAt(0)}
                     </div>
-                  </Reveal>
-                ))}
-              </div>
-            </article>
+                    <h3 className="text-xl font-bold text-typography-black mb-3">{value.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">
+                      {value.desc}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
-
-        {/* Minimal footer spacing before site Footer */}
       </main>
       <Footer />
     </div>
