@@ -113,7 +113,7 @@ export default function AboutPage() {
                     {/* Content */}
                     <h3 className="text-2xl font-bold text-typography-black mb-4">Our Vision</h3>
                     <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                      To be Ghana's leading provider of innovative mobile payment systems and commercial agency solutions, empowering businesses and individuals to achieve financial inclusion and sustainable growth.
+                      To be Ghana&apos;s leading provider of innovative mobile payment systems and commercial agency solutions, empowering businesses and individuals to achieve financial inclusion and sustainable growth.
                     </p>
 
                     {/* Decorative Image Grid */}
