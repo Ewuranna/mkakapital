@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Get Started - Request a Quote | MKA Global Investment',
-  description: 'Request a tailored quote for trade solutions, financing, warehousing, and more.',
+  description: 'Request a tailored quote for trade solutions, financing, warehousing and more.',
 };
 
 export default function GetStartedPage() {
@@ -12,7 +12,7 @@ export default function GetStartedPage() {
       <Navigation />
       <main>
         {/* Modern Hero Section */}
-        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-16 overflow-hidden">
           {/* Background Accents */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div className="absolute top-20 right-0 w-96 h-96 bg-primary-red/5 rounded-full blur-3xl mix-blend-multiply animate-blob"></div>
@@ -88,7 +88,7 @@ export default function GetStartedPage() {
                       <div>
                         <h3 className="text-xl font-bold text-typography-black mb-2">Tailored Proposal</h3>
                         <p className="text-text-secondary text-sm leading-relaxed">
-                          We present a comprehensive plan outlining costs, timelines, and expected outcomes.
+                          We present a comprehensive plan outlining costs, timelines and expected outcomes.
                         </p>
                       </div>
                     </div>
@@ -143,12 +143,10 @@ export default function GetStartedPage() {
                         <div>
                           <label htmlFor="service" className="block text-sm font-medium text-typography-black mb-2">What do you need a quote for?</label>
                           <select id="service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-red/20 focus:border-primary-red transition-colors outline-none">
-                            <option value="">Select an option</option>
-                            <option value="trade-finance">Trade & Project Financing</option>
-                            <option value="asset-financing">Asset / Equipment Financing</option>
-                            <option value="commodities">Commodities & Agro Trading</option>
-                            <option value="warehousing">Collateral & Warehouse Management</option>
-                            <option value="revenue">Revenue Mobilization / Assurance</option>
+                            <option value="">Select a service</option>
+                            <option value="mobile-money">Mobile Money (MoMo) Services</option>
+                            <option value="asset-finance">Trade, Stock & Asset Finance</option>
+                            <option value="sales-marketing">Sales & Marketing Agency</option>
                             <option value="other">Other</option>
                           </select>
                         </div>
@@ -176,7 +174,7 @@ export default function GetStartedPage() {
                         </div>
                         <div>
                           <label htmlFor="details" className="block text-sm font-medium text-typography-black mb-2">Project Details</label>
-                          <textarea id="details" rows={4} required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-red/20 focus:border-primary-red transition-colors outline-none resize-none" placeholder="Briefly describe your needs, scope, and any specifics."></textarea>
+                          <textarea id="details" rows={4} required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-red/20 focus:border-primary-red transition-colors outline-none resize-none" placeholder="Briefly describe your needs, scope and any specifics."></textarea>
                         </div>
                       </div>
 

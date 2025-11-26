@@ -7,7 +7,7 @@ const services = [
   {
     image: "/sumup-S8o2yWPu0BM-unsplash.jpg",
     title: "Mobile Money (MoMo) Services",
-    description: "Secure and efficient mobile money services across major networks in Ghana — including deposits, withdrawals, airtime & data purchases, bill payments, merchant payment solutions, and agent network management.",
+    description: "Secure and efficient mobile money services across major networks in Ghana — including deposits, withdrawals, airtime & data purchases, bill payments, merchant payment solutions and agent network management.",
   },
   {
     image: "/pexels-anthonyshkraba-production-8837549.jpg",
@@ -17,7 +17,7 @@ const services = [
   {
     image: "/pexels-mart-production-7550542.jpg",
     title: "Sales & Marketing Agency",
-    description: "Professional sales and marketing services for local and international partners — including digital marketing, field sales representation, product activations, market research, and brand distribution support.",
+    description: "Professional sales and marketing services for local and international partners — including digital marketing, field sales representation, product activations, market research and brand distribution support.",
   }
 ];
 
@@ -40,7 +40,7 @@ export default function ServicesSection() {
             Built for Modern Business
           </h2>
           <p className="text-base text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed">
-            MKA Kapital & Marketing Limited offers a range of services designed to cut waste, harness operational costs, improve sustainability, and create value for money. Our robust and versatile marketplace solutions have attracted strategic B2B customers and partners across Banking, Finance, and Insurance sectors who rely on us for:
+            MKA Kapital & Marketing Limited offers a range of services designed to cut waste, harness operational costs, improve sustainability and create value for money. Our robust and versatile marketplace solutions have attracted strategic B2B customers and partners across Banking, Finance and Insurance sectors who rely on us for:
           </p>
         </div>
 

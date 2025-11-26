@@ -130,7 +130,7 @@ export default function HeroSection() {
                   <span className="text-primary-red">Inspiring Dreams</span>
                 </h1>
                 <p className="text-base font-light max-w-2xl leading-relaxed text-gray-200">
-                  Your complete partner for innovative mobile payment systems and commercial agency solutions. Delivering convenience, financial inclusion, and business growth for individuals, SMEs, and corporate clients.
+                  Your complete partner for innovative mobile payment systems and commercial agency solutions. Delivering convenience, financial inclusion and business growth for individuals, SMEs and corporate clients.
                 </p>
               </div>
 
@@ -174,25 +174,25 @@ export default function HeroSection() {
                   <div className="text-center">
                     <div className="w-20 h-20 bg-primary-red/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-10 h-10 text-primary-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">Fast & Reliable</h3>
-                    <p className="text-gray-300">Decisions in days, not weeks</p>
+                    <p className="text-gray-300">Innovative financial solutions for Ghana</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-white mb-1">
-                        <Counter end={500} suffix="+" />
+                        <Counter end={5} suffix="+" />
                       </div>
-                      <div className="text-sm text-gray-300">Happy Clients</div>
+                      <div className="text-sm text-gray-300">Years of Excellence</div>
                     </div>
                     <div className="text-center p-4 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold text-primary-red mb-1">
-                        <Counter end={2.5} decimals={1} prefix="$" suffix="B+" />
+                        <Counter end={3} />
                       </div>
-                      <div className="text-sm text-gray-300">Assets Managed</div>
+                      <div className="text-sm text-gray-300">Core Services</div>
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 cursor-pointer hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 cursor-pointer hover:scale-110 transition-transform focus:outline-none"
         aria-label="Scroll to services"
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

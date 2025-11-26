@@ -55,7 +55,7 @@ export default function ProductsPage() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-lg">
-                  We deliver practical solutions tailored to support everyday business growth needs. Built for speed, transparency, and access.
+                  We deliver practical solutions tailored to support everyday business growth needs. Built for speed, transparency and access.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -103,7 +103,7 @@ export default function ProductsPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">What We Offer</h2>
               <p className="text-text-secondary max-w-2xl mx-auto text-lg">
-                Our product range supports individuals, SMEs, and corporate clients with essential goods and financial solutions.
+                Our product range supports individuals, SMEs and corporate clients with essential goods and financial solutions.
               </p>
             </div>
 
@@ -276,9 +276,9 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="flex justify-center max-w-6xl mx-auto">
               {/* Micro Credit / Lending */}
-              <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 max-w-3xl w-full">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary-red/5 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
 
                 <div className="flex items-center gap-5 mb-10 relative z-10">
@@ -306,52 +306,10 @@ export default function ProductsPage() {
 
                 <div className="relative z-10">
                   <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Trusted Partners</h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {["Oval Micro Credit", "Adinkra Micro Credit", "Global Pace", "Bliss Micro Credit"].map((partner, i) => (
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                    {["Oval Micro Credit", "Adinkra Micro Credit", "Global Pace", "Bliss Micro Credit", "Serene Insurance"].map((partner, i) => (
                       <div key={i} className="aspect-square rounded-xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center p-4 text-center hover:border-primary-red/30 hover:bg-white hover:shadow-md transition-all duration-300 group/logo">
                         <div className="w-10 h-10 rounded-full bg-gray-200 mb-3 group-hover/logo:bg-primary-red/10 group-hover/logo:text-primary-red flex items-center justify-center transition-colors">
-                          <span className="font-bold text-xs">{partner.charAt(0)}</span>
-                        </div>
-                        <span className="text-[10px] font-bold text-gray-400 group-hover/logo:text-typography-black uppercase leading-tight">{partner}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Insurance */}
-              <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-teal/5 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
-
-                <div className="flex items-center gap-5 mb-10 relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-secondary-teal/10 text-secondary-teal flex items-center justify-center shadow-sm">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-typography-black">Insurance Solutions</h3>
-                    <p className="text-text-secondary">Protecting what matters most to you</p>
-                  </div>
-                </div>
-
-                <div className="mb-10 relative z-10">
-                  <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-4">Available Products</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["General Business Insurance"].map((product, i) => (
-                      <span key={i} className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-medium text-typography-black border border-gray-100">
-                        {product}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="relative z-10">
-                  <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Trusted Partners</h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {["Serene Insurance"].map((partner, i) => (
-                      <div key={i} className="aspect-square rounded-xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center p-4 text-center hover:border-secondary-teal/30 hover:bg-white hover:shadow-md transition-all duration-300 group/logo">
-                        <div className="w-10 h-10 rounded-full bg-gray-200 mb-3 group-hover/logo:bg-secondary-teal/10 group-hover/logo:text-secondary-teal flex items-center justify-center transition-colors">
                           <span className="font-bold text-xs">{partner.charAt(0)}</span>
                         </div>
                         <span className="text-[10px] font-bold text-gray-400 group-hover/logo:text-typography-black uppercase leading-tight">{partner}</span>

@@ -10,7 +10,7 @@ export const metadata = {
 const services = [
   {
     title: 'Mobile Money (MoMo) Services',
-    description: 'Secure and efficient mobile money operations across major networks in Ghana — including deposits, withdrawals, airtime & data purchases, bill payments, merchant solutions, and agent network management.',
+    description: 'Secure and efficient mobile money operations across major networks in Ghana — including deposits, withdrawals, airtime & data purchases, bill payments, merchant solutions and agent network management.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     )
@@ -24,7 +24,7 @@ const services = [
   },
   {
     title: 'Sales & Marketing Agency',
-    description: 'Professional sales and marketing services for local and international partners — including digital marketing, field sales representation, product activations, market research, and brand distribution support.',
+    description: 'Professional sales and marketing services for local and international partners — including digital marketing, field sales representation, product activations, market research and brand distribution support.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
     )
@@ -58,7 +58,7 @@ export default function ServicesPage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-2xl mx-auto">
-                We deliver tailored strategies and operational excellence to help you cut costs, reduce waste, and drive sustainable growth.
+                We deliver tailored strategies and operational excellence to help you cut costs, reduce waste and drive sustainable growth.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

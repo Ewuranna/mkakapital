@@ -6,8 +6,8 @@ import Reveal from '../components/Reveal';
 import GrowthGraph from '../components/GrowthGraph';
 
 export const metadata = {
-  title: 'About Us - MKA Global Investment',
-  description: 'Learn about MKA Global Investment\'s mission, values, and journey in transforming global trade finance.',
+  title: 'About Us - MKA Kapital & Marketing Ltd',
+  description: 'Learn about MKA Kapital & Marketing Ltd\'s mission, values and journey in transforming global trade finance.',
 };
 
 export default function AboutPage() {
@@ -27,13 +27,13 @@ export default function AboutPage() {
               <Reveal>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gray-200 mb-6 shadow-sm">
                   <span className="w-2 h-2 rounded-full bg-primary-red"></span>
-                  <span className="text-xs font-bold tracking-wider text-text-secondary uppercase">About MKA Global</span>
+                  <span className="text-xs font-bold tracking-wider text-text-secondary uppercase">About MKA Kapital & Marketing Ltd</span>
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-typography-black mb-6 leading-tight">
                   Your Trusted Partner in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-red to-secondary-teal">Innovative Solutions</span>
                 </h1>
                 <p className="text-lg text-text-secondary mb-8 leading-relaxed max-w-lg">
-                  MKA Kapital & Marketing Limited delivers tailored mobile payment systems, asset financing, and commercial agency solutions that help Ghanaian businesses and households drive convenience and growth.
+                  MKA Kapital & Marketing Limited delivers tailored mobile payment systems, asset financing and commercial agency solutions that help Ghanaian businesses and households drive convenience and growth.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/services" className="px-8 py-4 bg-primary-red text-white rounded-xl font-semibold hover:bg-red-600 transition-all shadow-lg shadow-primary-red/20 hover:shadow-primary-red/30 hover:-translate-y-0.5">
@@ -73,12 +73,134 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Vision and Mission Section */}
+        <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-red/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-teal/5 rounded-full blur-3xl"></div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <Reveal>
+                <div className="inline-block p-2 bg-white rounded-lg mb-4 shadow-sm border border-gray-100">
+                  <span className="text-primary-red font-semibold text-sm uppercase tracking-wider">Our Purpose</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">
+                  Vision & Mission
+                </h2>
+                <p className="text-text-secondary text-lg">
+                  Driven by purpose, guided by values, focused on impact.
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Vision Card */}
+              <Reveal delay={0.1}>
+                <div className="group relative bg-white rounded-3xl p-10 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-red/10 to-transparent rounded-full blur-2xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-500"></div>
+
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className="w-16 h-16 rounded-2xl bg-primary-red/10 text-primary-red flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary-red group-hover:text-white transition-all duration-300">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-typography-black mb-4">Our Vision</h3>
+                    <p className="text-text-secondary text-lg leading-relaxed mb-6">
+                      To be Ghana's leading provider of innovative mobile payment systems and commercial agency solutions, empowering businesses and individuals to achieve financial inclusion and sustainable growth.
+                    </p>
+
+                    {/* Decorative Image Grid */}
+                    <div className="grid grid-cols-3 gap-2 mt-6">
+                      <div className="relative h-32 rounded-xl overflow-hidden bg-gradient-to-br from-primary-red/20 to-primary-red/5">
+                        <Image
+                          src="/pexels-henri-mathieu-8349428.jpg"
+                          alt="Vision"
+                          fill
+                          className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          sizes="150px"
+                        />
+                      </div>
+                      <div className="relative h-32 rounded-xl overflow-hidden bg-gradient-to-br from-primary-red/20 to-primary-red/5">
+                        <Image
+                          src="/pexels-civan-9836373.jpg"
+                          alt="Growth"
+                          fill
+                          className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          sizes="150px"
+                        />
+                      </div>
+                      <div className="relative h-32 rounded-xl overflow-hidden bg-gradient-to-br from-primary-red/20 to-primary-red/5">
+                        <Image
+                          src="/pexels-thirdman-5319357.jpg"
+                          alt="Success"
+                          fill
+                          className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          sizes="150px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Mission Card */}
+              <Reveal delay={0.2}>
+                <div className="group relative bg-white rounded-3xl p-10 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-secondary-teal/10 to-transparent rounded-full blur-2xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-500"></div>
+
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className="w-16 h-16 rounded-2xl bg-secondary-teal/10 text-secondary-teal flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-secondary-teal group-hover:text-white transition-all duration-300">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-typography-black mb-4">Our Mission</h3>
+                    <p className="text-text-secondary text-lg leading-relaxed mb-6">
+                      To deliver tailored, reliable and efficient solutions that bridge financial gaps, eliminate supply challenges and create measurable value for our clients across Ghana.
+                    </p>
+
+                    {/* Mission Points */}
+                    <ul className="space-y-3">
+                      {[
+                        "Provide seamless mobile money services",
+                        "Enable accessible asset financing",
+                        "Build strategic commercial partnerships",
+                        "Drive operational excellence"
+                      ].map((point, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded-full bg-secondary-teal/20 text-secondary-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span className="text-typography-black font-medium text-sm">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         {/* Why Work With Us - Modern Grid */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <Reveal>
-                <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">Why Choose MKA?</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-typography-black mb-4">Why Choose MKA Kapital & Marketing Ltd?</h2>
                 <p className="text-text-secondary text-lg">
                   We combine local expertise with global standards to deliver solutions that truly matter.
                 </p>
@@ -94,7 +216,7 @@ export default function AboutPage() {
                 },
                 {
                   title: "Sector Expertise",
-                  desc: "Deep understanding of mobile money, asset finance, and commercial trading landscapes.",
+                  desc: "Deep understanding of mobile money, asset finance and commercial trading landscapes.",
                   icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 },
                 {
@@ -140,7 +262,7 @@ export default function AboutPage() {
                   <span className="text-gray-400">Year After Year</span>
                 </h2>
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                  From our humble beginnings with a lean team, MKA Kapital has grown into a trusted partner with a nationwide presence. Our commitment to R&D remains the backbone of our strategic positioning.
+                  From our humble beginnings with a lean team, MKA Kapital has grown into a trusted partner with a nationwide presence. Our commitment to Research and Development remains the backbone of our strategic positioning.
                 </p>
 
                 <div className="grid grid-cols-2 gap-8">
@@ -229,7 +351,7 @@ export default function AboutPage() {
               {[
                 {
                   title: "Transparency",
-                  desc: "We believe in open, honest, and accountable dealings that build lasting trust.",
+                  desc: "We believe in open, honest and accountable dealings that build lasting trust.",
                   color: "bg-blue-50 text-blue-600"
                 },
                 {
@@ -239,7 +361,7 @@ export default function AboutPage() {
                 },
                 {
                   title: "Professionalism",
-                  desc: "We maintain a high level of conduct, appearance, and performance.",
+                  desc: "We maintain a high level of conduct, appearance and performance.",
                   color: "bg-purple-50 text-purple-600"
                 },
                 {

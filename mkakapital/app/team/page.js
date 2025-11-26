@@ -37,7 +37,7 @@ export default function TeamPage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-text-secondary mb-10 leading-relaxed max-w-2xl mx-auto">
-                A diverse team committed to execution, integrity, and client success.
+                A diverse team committed to execution, integrity and client success.
               </p>
             </div>
           </div>
